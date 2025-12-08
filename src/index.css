@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "tailwindcss"; 
+
+body {
+  overflow-x: hidden; /* Prevent horizontal scroll when cart opens */
+}
+.cart-overlay-fix {
+  /* This ensures the black layer is 20% transparent, 
+     making the background visible. */
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  /* Also add a mild blur for a modern effect */
+  /* backdrop-filter: blur(2px); */
+}
+
+/* General Cart Item Styling (for the +/- buttons and layout) */
+.qty-adjust {
+  /* Style for the quantity +/- buttons */
+  @apply bg-gray-100 px-2 py-1 text-xl leading-none rounded-none transition;
+}
+.qty-adjust:hover {
+  @apply bg-gray-200;
+}
+
+/* All other #cart-sidebar rules have been REMOVED to allow the Tailwind classes in Cart.jsx to control 
+   the cart's position, size, and animation, including the transparent overlay. */
