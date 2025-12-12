@@ -50,15 +50,14 @@ function App() {
   const totalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
-    <Router>
+    // 📢 FIX: Added 'basename' to tell React Router the app lives in a subfolder
+    <Router basename="/code-n-cluck"> 
       <div className="flex flex-col min-h-screen">
         
         {/* HEADER: Passed props so the button works */}
         <Header totalItems={totalItems} setIsCartOpen={setIsCartOpen} />
 
         {/* MAIN CONTENT AREA */}
-        {/* We add a margin on desktop if you want the cart always visible, 
-            otherwise, the cart component handles the overlay */}
         <main className="flex-grow relative">
           <Routes>
             <Route path="/" element={<Home />} />

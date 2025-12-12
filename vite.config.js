@@ -6,8 +6,13 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [tailwindcss(),
     react()],
-    base: '/code-n-cluck',
+    base: '/code-n-cluck/',
 })
+
+
+
+
+
 
 // // tailwind.config.js
 // /** @type {import('tailwindcss').Config} */
