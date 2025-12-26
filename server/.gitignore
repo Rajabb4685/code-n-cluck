@@ -1,0 +1,4 @@
+# Secrets and Environment Variables
+server/config.env
+.env
+config.env
