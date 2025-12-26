@@ -39,7 +39,7 @@ function App() {
     
     try {
       // UPDATED: Changed to 5001
-      const response = await fetch("http://localhost:5001/api/orders", {
+      const response = await fetch("https://code-n-cluck.onrender.com/api/orders", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ 

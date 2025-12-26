@@ -13,7 +13,7 @@ const Menu = ({ addToCart }) => {
 
   useEffect(() => {
     // UPDATED: Now points to 5001 to match your server
-    fetch("http://localhost:5001/api/menu")
+    fetch("https://code-n-cluck.onrender.com/api/menu")
       .then(res => res.json())
       .then(data => setItems(data))
       .catch(err => console.error("Database connection error:", err));
